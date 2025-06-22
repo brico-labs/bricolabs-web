@@ -1,11 +1,6 @@
 import "./TopBar.css"
-import { useEffect, useState } from "react";
 
 export default function topBar() {
-
-const [scrollTop, setScrollTop] = useState(0);
-
-//window.addEventListener('scroll', handleScroll);
 
 return <header id="main-menu" >
       <div className="menu-bg"></div>
