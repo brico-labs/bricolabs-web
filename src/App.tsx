@@ -1,4 +1,5 @@
 import './App.css'
+import TopBar from './TopBar/TopBar'
 
 function App() {
 
@@ -13,34 +14,19 @@ function App() {
     <link rel="preconnect" href="https://fonts.gstatic.com"></link> 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Press+Start+2P&display=swap" rel="stylesheet"></link>
   </head>
-  <body>
+  
   <a id="init"></a>
-  <header id="main-menu" >
-      <div className="menu-bg"></div>
-      <div className="wrapper">
-          <a id="init" href="#init"><img className="logo-mini" src="assets/images/bricolabs_logo_mini.png" alt="Logo Bricolabs" /></a>
-          <div className="show-menu"></div>
-          <nav className="menu">
-              <ul>
-                  <li><a id="menu-who" href="#who">¿Quiénes somos?</a></li>
-                  <li><a id="menu-proyects" href="#proyects">Galería</a></li>
-                  <li><a id="menu-contact" href="#contact">Contacto</a></li>
-                  <li><a href="wiki/">Wiki</a></li>
-                  <li><a href="http://oshwdem.org">OSHWDem</a></li>
-              </ul>
-          </nav>
-      </div>
-  </header>
+  <TopBar></TopBar>
   <section className="hero intro cover">
 
         <div className="hero-text-container">
             <h1 id="hero-title">Fomentando la cultura open desde 2013 ⚡</h1>
-            <h2 id="hero-subtitle">Bienvenido al primer makerspace de Galicia.</h2>
+            <h2 id="hero-subtitle">Bienvenidos al primer makerspace de Galicia.</h2>
         </div>
       <img id="hero-logo" src="assets/images/bricolabs_logo.png" alt="Logo Bricolabs" />
   </section>
   <section className="description content">
-      <a id="who"></a>
+      <a className="anchor" id="who"></a>
       <div className="wrapper table">
           <div className="section-text">
               <h1 className="section-title">¿Quiénes somos?</h1>
@@ -52,39 +38,33 @@ function App() {
           <img className="desc-image" src="assets/images/group_photo.jpg" alt="Foto de grupo Bricolabs" />
       </div>
   </section>
-  <section className="proyects content">
-      <a id="proyects"></a>
+  <section className="projects content">
+      <a className="anchor" id="projects"></a>
       <h1 className="section-title">Galería de imágenes</h1>
       <div className="wrapper">
           <div className="section-desc">Cada semana nos reunimos para poner en común proyectos personales y desarrollar proyectos conjuntos. En estas imágenes puedes ver algunas cosas que hemos hecho. Además asistimos a numeros eventos de hardware libre y organizamos anualmente la feria de tecnología abierta OSHWDem.<br /><br />Puedes ver toda la documentación sobre nuestros proyectos en nuestra <a href="wiki/">Wiki</a>. También puedes acceder al <a href="https://github.com/brico-labs">GitHub</a> de los proyectos comunes.</div>
           <div className="img-container">
-              <div className="img-desc"><h1>Concurso de robots siguelíneas</h1><br />OSHWDem 2014<br /> Museo Domus de A coruña</div>
               <img src="assets/images/siguelineas-small.jpg" alt="Concurso de robots siguelíneas en la OSHWDem" />
           </div>
           <div className="img-container">
-              <div className="img-desc"><h1>Concurso de robots sumo</h1><br />OSHWDem 2014<br /> Museo Domus de A coruña</div>
               <img src="assets/images/sumo-robot-small.jpg" alt="Consurso de robots sumo en la OSHWDem" />
           </div>
           <div className="img-container">
-              <div className="img-desc"><h1>Bricolabs en el día de la ciencia en la calle</h1><br />2013<br /> Parque de Santa Margarita<br /> (casa de las ciencias)</div>
               <img src="assets/images/ciencia-en-la-calle-small.jpg" alt="Bricolabs en el dia de la ciencia en la calle" />
           </div>
           <div className="img-container">
-              <div className="img-desc"><h1>Escornabot</h1><br />Proyecto libre de robótica educativa</div>
               <img src="assets/images/escornabot-small.jpg" alt="Proyecto libre de robótica educativa Escornabot" />
           </div>
           <div className="img-container">
-              <div className="img-desc"><h1>Sensor siguelíneas</h1><br />Fabricando un sensor para robot siguelíneas</div>
               <img src="assets/images/sensor_siguelineas-small.jpg" alt="Fabricando sensor siguelineas" />
           </div>
           <div className="img-container">
-              <div className="img-desc"><h1>Proyecto de electónica</h1><br />Jornada de "cacharreo" en Bricolabs</div>
               <img src="assets/images/proyecto_electronica-small.jpg" alt="Proyecto electronica en Bricolabs" />
           </div>
       </div>
   </section>
   <section className="media content">
-      <a id="contact"></a>
+      <a className="anchor" id="contact"></a>
       <h1 className="section-title">Contacto</h1>
       <div className="wrapper">
           <div className="section-desc">
@@ -98,11 +78,6 @@ function App() {
       <a href="https://github.com/brico-labs" target="_blank"><img src="assets/images/github-white.png" alt="GitHub" /></a>
       <a href="mailto:contacto@bricolabs.cc"><img src="assets/images/email.png" alt="Email" /></a>
   </footer>
-  <div className="image-fullscreen">
-  <div className="close-image"></div>
-  </div>
-  <div className="shadow"></div>
-  </body>
   </>
   }
 

@@ -1,41 +1,60 @@
+/* 
+  DEBUG CSS
+  * {
+  outline: 1px solid #f00 !important;
+  } 
+*/
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   font-family: 'DM Sans', sans-serifb;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   font-family: sans-serif;
   color: #000;
   display: flex;
-  
+  width: 100%;
   flex-direction: column;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
 a {
   font-weight: bold;
-  color: white;
+  text-decoration: underline;
+  color: #0099B0;
 }
-a:hover{
-  color: white;
+
+a:hover {
+  color: #0099B0;
 }
+
+a.anchor {
+  position: relative;
+  top: -120px;
+}
+
 .cover {
-  padding-top:3em;
+  padding-top: 3em;
   padding-left: 2em;
   padding-right: 2em;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 3em;
 }
+
 .hero-text-container {
   margin: 10%;
 }
+
 #hero-subtitle {
   margin-top: 1em;
 }
@@ -43,12 +62,15 @@ a:hover{
 .selected {
   font-weight: bold;
 }
+
 section {
   margin: 1em 0;
 }
+
 section.description {
   display: flex;
 }
+
 .section-title {
   margin-bottom: 30px;
   text-align: center;
@@ -70,47 +92,6 @@ section.description {
   background-size: cover;
   overflow: hidden;
   position: absolute;
-}
-
-header {
-  position: sticky;
-  height: 70px;
-  color: white;
-  top: 0px;
-  width: 100%;
-  z-index: 900;
-  font-weight: bold;
-}
-
-.menu-bg {
-  height: 70px;
-  width: 100%;
-  position: absolute;
-  display: none;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.menu li {
-  display: inline;
-  padding: 0 10px;
-  line-height: 70px;
-  font-family: sans-serif;
-}
-
-.menu-dark {
-  color: #000 !important;
-  border-bottom: solid 1px;
-}
-
-#main-menu {
-  color: inherit;
-  text-decoration: none;
-  display:flex;
-  position: absolute;
-  top:0px;
-  background-color: black;
 }
 
 #main-menu a:hover {
@@ -137,7 +118,7 @@ header {
   width: 90%;
   display: block;
   margin: 2em;
-  
+
 }
 
 .desc-text {
@@ -146,7 +127,7 @@ header {
   font-size: 1.1em;
 }
 
-#video-bricolabs{
+#video-bricolabs {
   width: 100%;
   min-height: 100%;
   overflow: hidden;
@@ -162,7 +143,7 @@ header {
 
 .content {
   background-color: #fff;
-  width:100%;
+  width: 100%;
   position: relative;
   z-index: 100;
 }
@@ -184,9 +165,7 @@ header {
   display: inline-block;
   overflow: hidden;
   background-color: #000;
-  -webkit-box-shadow: 3px 4px 20px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 3px 4px 20px 0px rgba(0,0,0,0.75);
-  box-shadow: 3px 4px 20px 0px rgba(0,0,0,0.75);
+  border-radius: 30px;
 }
 
 .img-container img {
@@ -196,14 +175,9 @@ header {
   display: block;
 }
 
-.proyects .wrapper, .media .wrapper {
+.projects .wrapper,
+.media .wrapper {
   text-align: center;
-}
-
-.img-desc {
-  width: 100%;
-  margin: 40px 5px;
-  position: absolute;
 }
 
 .wrapper {
@@ -229,16 +203,6 @@ header {
   cursor: pointer;
 }
 
-.image-fullscreen {
-  display: none;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 1001;
-  top: 0;
-  text-align: center;  
-}
-
 .shadow {
   display: none;
   opacity: 0;
@@ -250,7 +214,7 @@ header {
   top: 0;
 }
 
-.image-fullscreen img{
+.image-fullscreen img {
   margin-top: 100px;
   max-width: 90%;
   max-height: 90%;
@@ -258,7 +222,7 @@ header {
 
 .close-image {
   float: right;
-  margin:20px;
+  margin: 20px;
   background: url(../images/close-white.png) no-repeat center center;
   height: 40px;
   width: 40px;
@@ -281,121 +245,93 @@ footer img {
 
 @media screen and (max-width: 900px) {
   .desc-image {
-     width: 100%;
-     display: block;
-     margin-bottom: 40px;
-   }
-   
-   .twitter, .facebook, .desc-text, .menu-bg, .logo-mini {
-       display: inline;
-   }
-   
-   .show-menu {
-       display: inline;
-   }
-       
-   #video-bricolabs {
-      display: none;
-   }
-   
-   .menu {
-      display: none;
-      position: fixed;
-      top: 70px;
-      width: 100%;
-      background-color: #f4f4f4;
-      text-align: center;
-      color: #000;
+    width: 100%;
+    display: block;
+    margin-bottom: 40px;
   }
 
-  .menu li{
-      margin: 1.5em 0;
-      display: block;
-      line-height: 1em;
+  .twitter,
+  .facebook,
+  .desc-text,
+  .menu-bg,
+  .logo-mini {
+    display: inline;
+  }
+
+  .show-menu {
+    display: inline;
+  }
+
+  #video-bricolabs {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    background-color: #f4f4f4;
+    text-align: center;
+    color: #000;
+  }
+
+  .menu li {
+    margin: 1.5em 0;
+    display: block;
+    line-height: 1em;
   }
 }
 
 @media screen and (max-width: 400px) {
   .img-container {
-      width: 90%;
+    width: 90%;
   }
 }
 
 @media screen and (max-width: 320px) {
   .intro-bg {
-      background: url(../images/BricolabsWide-320.jpg) no-repeat center center;
-      background-size: cover;
+    background: url(../images/BricolabsWide-320.jpg) no-repeat center center;
+    background-size: cover;
   }
-  
+
   .proto {
-      height: 240px;
+    height: 240px;
   }
-  
+
   .video {
-      background: url(../images/bricolabs-taller-320.jpg) no-repeat center center;
-      height: 138px;
+    background: url(../images/bricolabs-taller-320.jpg) no-repeat center center;
+    height: 138px;
   }
-  
+
   .proto-bg {
-      background: url(../images/bricolabs-proto-320.jpg) no-repeat center bottom;
-      background-attachment: scroll !important;
-      height: 240px;
+    background: url(../images/bricolabs-proto-320.jpg) no-repeat center bottom;
+    background-attachment: scroll !important;
+    height: 240px;
   }
 }
 
-@media screen and (max-width: 768px) and (min-width: 321px){
+@media screen and (max-width: 768px) and (min-width: 321px) {
   .intro-bg {
-      background: url(../images/BricolabsWide-768.jpg) no-repeat center center;
+    background: url(../images/BricolabsWide-768.jpg) no-repeat center center;
   }
+
   .cover {
     flex-direction: column-reverse;
   }
+
   #hero-logo {
     max-width: 60%;
   }
-  
+
 }
 
-@media screen and (max-width: 1024px) and (min-width: 769px){
-  
+@media screen and (max-width: 1024px) and (min-width: 769px) {}
+
+@media screen and (max-width: 1200px) and (min-width: 1025px) {
+ 
 }
 
-@media screen and (max-width: 1200px) and (min-width: 1025px){
-  .intro-bg {
-      background: url(../images/BricolabsWide-1200.jpg) no-repeat center center;
-  }
+@media screen and (min-width: 1201px) {
   
-  .video, .proto {
-      height: 400px;
-  }
-  
-  .video {
-      background: url(../images/bricolabs-taller-1200.jpg) no-repeat center center;
-  }
-  
-  .proto-bg {
-      background: url(../images/bricolabs-proto-1200.jpg) no-repeat center bottom;
-      height: 900px;
-  }
-}
-
-@media screen and (min-width: 1201px){
-  .intro-bg {
-      background: url(../images/BricolabsWide-1600.jpg) no-repeat center center;
-      background-size: cover;
-  }
-  
-  .video, .proto {
-      height: 450px;
-  }
-  
-  .video {
-      background: url(../images/bricolabs-taller-1600.jpg) no-repeat center center;
-  }
-  
-  .proto-bg {
-      background: url(../images/bricolabs-proto-1600.jpg) no-repeat center bottom;
-      background-size: cover;
-      height: 1200px;
-  }
 }
